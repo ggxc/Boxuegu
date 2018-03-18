@@ -1,7 +1,9 @@
-package cn.edu.gdmec.android;
+package cn.edu.gdmec.android.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import cn.edu.gdmec.android.R;
 
 public class MainActivity extends AppCompatActivity {
 
