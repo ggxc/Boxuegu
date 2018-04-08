@@ -77,7 +77,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="3dp"
         android:id="@+id/bottom_bar_image_exercise"
-        android:src="@drawable/main_exercise_icon"/>
+        android:src="@drawable/main_exercises_icon"/>
 
 
 
