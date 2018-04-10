@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -89,23 +91,30 @@ public class ActivityModifyPswActivity extends Activity implements View.OnClickL
         }else if (!newPsw.equals(again)){
             Toast.makeText(this,"两次输入的新密码不一致",Toast.LENGTH_SHORT).show();
             return;
+        }else {
+            Toast.makeText(this,"新密码设置成功",Toast.LENGTH_SHORT).show();
+            modifyPsw(newPsw);
+            Intent intent = new Intent(ActivityModifyPswActivity.this,LoginActivity.class);
+            startActivity(intent);
+            ActivitySettingActivity.instance.finish();
+            ActivityModifyPswActivity.this.finish();
         }
 
 
-        String psw = et_new_psw.getText().toString().trim();
-        if (TextUtils.isEmpty(psw)) {
-            Toast.makeText(this, "请输入新密码", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String again = et_new_psw_again.getText().toString().trim();
-        if (TextUtils.isEmpty(again)) {
-            Toast.makeText(this, "请再次输入新密码", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         // TODO validate success, do something
 
 
+    }
+    private void modifyPsw(String newPsw){
+        String md5psw = MD5Utils.md5(newPsw);
+        SharedPreferences sharedPreferences = getSharedPreferences("loginInfo",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(userName,md5psw);
+        editor.commit();
+    }
+    private  String readPsw(){
+        SharedPreferences sharedPreferences = getSharedPreferences("loginInfo",MODE_PRIVATE);
+        String spPsw = sharedPreferences
     }
 }
