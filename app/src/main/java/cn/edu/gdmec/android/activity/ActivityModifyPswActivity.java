@@ -115,6 +115,9 @@ public class ActivityModifyPswActivity extends Activity implements View.OnClickL
     }
     private  String readPsw(){
         SharedPreferences sharedPreferences = getSharedPreferences("loginInfo",MODE_PRIVATE);
-        String spPsw = sharedPreferences
+        String spPsw = sharedPreferences.getString(userName,"");
+        Log.i("username",userName);
+        Log.i("spPsw",spPsw);
+        return spPsw;
     }
 }

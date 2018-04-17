@@ -22,6 +22,7 @@ public class ActivitySettingActivity extends Activity implements View.OnClickLis
     private RelativeLayout rl_modify_psw;
     private RelativeLayout rl_security_setting;
     private RelativeLayout rl_exit_login;
+    public static ActivitySettingActivity instance=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,13 @@ public class ActivitySettingActivity extends Activity implements View.OnClickLis
                 ActivitySettingActivity.this.finish();
                 break;
             case R.id.rl_modify_psw:
+                Intent intent = new Intent(ActivitySettingActivity.this,ActivityModifyPswActivity.class);
+                startActivity(intent);
                 break;
             case R.id.rl_security_setting:
+                Intent intent2 = new Intent(ActivitySettingActivity.this,ActivityFindPswActivity.class);
+                intent2.putExtra("from","security");
+                startActivity(intent2);
                 break;
             case R.id.rl_exit_login:
                 Toast.makeText(this,"退出登录成功",Toast.LENGTH_SHORT).show();

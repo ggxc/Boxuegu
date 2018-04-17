@@ -34,10 +34,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private ImageView bottom_bar_image_myinfo;
     private RelativeLayout bottom_bar_myinfo_btn;
     private LinearLayout main_bottom_bar;
+    private static MainActivity instance = null;
 
-    FragmentManager manager = getSupportFragmentManager();
-    FragmentTransaction transaction = manager.beginTransaction();
-transaction.add(R.id.main_body,new CourseFragment()).commit();
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -84,9 +82,14 @@ return super.onKeyDown(keyCode, event);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.main_body,new CourseFragment()).commit();
 
-        setMain();;
+
+
+        setMain();
+        instance = this;
     }
 
     private void initView() {
