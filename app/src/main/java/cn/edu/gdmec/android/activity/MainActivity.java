@@ -115,8 +115,8 @@ return super.onKeyDown(keyCode, event);
                 bottom_bar_image_course.setImageResource(R.drawable.main_course_icon_selected);
                 bottom_bar_text_course.setTextColor(Color.parseColor("#0097F7"));
 
-                bottom_bar_text_exercise.setTextColor(Color.parseColor("#66666"));
-                bottom_bar_text_myinfo.setTextColor(Color.parseColor("#66666"));
+                bottom_bar_text_exercise.setTextColor(Color.parseColor("#666666"));
+                bottom_bar_text_myinfo.setTextColor(Color.parseColor("#666666"));
 
                 bottom_bar_image_exercise.setImageResource(R.drawable.main_exercises_icon);
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon);
@@ -125,8 +125,8 @@ return super.onKeyDown(keyCode, event);
                 bottom_bar_image_exercise.setImageResource(R.drawable.main_course_icon_selected);
                 bottom_bar_text_exercise.setTextColor(Color.parseColor("#0097F7"));
 
-                bottom_bar_text_course.setTextColor(Color.parseColor("#66666"));
-                bottom_bar_text_myinfo.setTextColor(Color.parseColor("#66666"));
+                bottom_bar_text_course.setTextColor(Color.parseColor("#666666"));
+                bottom_bar_text_myinfo.setTextColor(Color.parseColor("#666666"));
 
                 bottom_bar_image_course.setImageResource(R.drawable.main_course_icon);
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon);
@@ -135,8 +135,8 @@ return super.onKeyDown(keyCode, event);
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_course_icon_selected);
                 bottom_bar_text_myinfo.setTextColor(Color.parseColor("#0097F7"));
 
-                bottom_bar_text_course.setTextColor(Color.parseColor("#66666"));
-                bottom_bar_text_exercise.setTextColor(Color.parseColor("#66666"));
+                bottom_bar_text_course.setTextColor(Color.parseColor("#666666"));
+                bottom_bar_text_exercise.setTextColor(Color.parseColor("#666666"));
 
                 bottom_bar_image_exercise.setImageResource(R.drawable.main_exercises_icon);
                 bottom_bar_image_course.setImageResource(R.drawable.main_course_icon);

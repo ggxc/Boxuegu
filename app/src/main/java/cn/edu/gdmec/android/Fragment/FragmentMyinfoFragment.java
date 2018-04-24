@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import cn.edu.gdmec.android.R;
 import cn.edu.gdmec.android.activity.ActivitySettingActivity;
+import cn.edu.gdmec.android.activity.ActivityUserInfoActivity;
 import cn.edu.gdmec.android.activity.LoginActivity;
 import cn.edu.gdmec.android.utils.AnalysisUtils;
 
@@ -61,6 +62,8 @@ public class FragmentMyinfoFragment extends Fragment implements View.OnClickList
         switch (v.getId()){
             case R.id.ll_head:
                 if (AnalysisUtils.readLoginStatus(getActivity())){
+                    Intent intent = new Intent(getActivity(), ActivityUserInfoActivity.class);
+                    getActivity().startActivity(intent);
 
                 }else {
                     Intent intent = new Intent(getActivity(), LoginActivity.class);

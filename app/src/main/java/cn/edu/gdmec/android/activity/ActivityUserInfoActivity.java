@@ -159,6 +159,7 @@ protected void onActivityResult(int requestCode,int resultCode,Intent data){
             bdName.putString("content",name);
             bdName.putString("title","昵称");
             bdName.putInt("flag",1);
+            enterActivityForResult(ActivityChangeUserInfoActivity.class,CHANGE_NICKNAME,bdName);
             break;
         case R.id.rl_sex:
             String sex = tv_sex.getText().toString();
@@ -170,6 +171,7 @@ protected void onActivityResult(int requestCode,int resultCode,Intent data){
             bdSignature.putString("content",signature);
             bdSignature.putString("title","签名");
             bdSignature.putInt("flag",2);
+            enterActivityForResult(ActivityChangeUserInfoActivity.class,CHANGE_SIGNATURE,bdSignature);
             break;
     }
 

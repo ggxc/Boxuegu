@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 
-import javax.xml.soap.Text;
+
 
 import cn.edu.gdmec.android.R;
 import cn.edu.gdmec.android.utils.AnalysisUtils;
